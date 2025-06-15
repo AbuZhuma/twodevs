@@ -1,3 +1,3 @@
-const api = "http://localhost:4040/api"
-const url = "http://localhost:4040/"
+const api = "https://twodevs.yuno.ws/api"
+const url = "https://twodevs.yuno.ws/"
 export {api, url}
