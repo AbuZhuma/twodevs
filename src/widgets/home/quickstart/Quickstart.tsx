@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import OneSecton from "../../../shared/ui/oneSection/OneSecton";
 import styles from "./styles.module.css";
 import { useDocsStore } from "../../../pages/docs/api";
-import { url } from "../../../shared/api";
 
 const ProjectsShowcase = () => {
   const navigate = useNavigate();
@@ -15,7 +14,7 @@ const ProjectsShowcase = () => {
       stack: ["React", "Node.js", "TypeScript", "AWS", "MongoDB", "Redux"],
       year: "2024",
       url: "siroca-crm",
-      image: `${url}siroca_logo.jpeg`
+      image: `/images/siroca_logo.jpeg`
     }
   ];
 
