@@ -6,9 +6,8 @@ const HeroSection = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.left}>
-        <h1>We are a team of two developers.</h1>
-        <p>We do all types of work with the site. From developing landing pages to CRM systems, we connect everything. We will make your dreams come true!</p>
-        <div className={styles.room}>
+        <h1>TwoDevs — Full-Cycle Development Duo</h1>
+        <p>We deliver end-to-end digital solutions - from high-converting landing pages to enterprise-grade CRM systems. Transforming your vision into robust technical implementations with clean architecture and pixel-perfect execution.</p>        <div className={styles.room}>
           <CreateRoom />
         </div>
       </div>

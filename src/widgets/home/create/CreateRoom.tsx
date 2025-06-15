@@ -1,16 +1,19 @@
-import { useState } from "react"
+import { scrollToElement } from "../../../shared/helpers"
 import CustomButton from "../../../shared/ui/button/CustomButton"
-import CustomInput from "../../../shared/ui/input/CustomInput"
 import styles from "./styles.module.css"
+import { useNavigate } from "react-router-dom"
 
 const CreateRoom = () => {
-      const [req, setReq] = useState("")
+      const navigate = useNavigate()
+
       return (
             <div className={styles.container}>
-                  <CustomInput size={40} state={req} setState={setReq} placeholder="You`r request" />
-                  <div className={styles.btns}>
-                        <CustomButton text="Simple request" size={60}/>
-                  </div>
+                  <CustomButton text="Get started!" size={60} onClick={async () => {
+                        navigate("/")
+                        setTimeout(() => {
+                              scrollToElement("fb")
+                        }, 300)
+                  }} />
             </div>
       )
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './styles.module.css';
 import CustomButton from '../button/CustomButton';
 import { useNavigate } from 'react-router-dom';
+import { scrollToElement } from '../../helpers';
 
 interface NavItem {
   id: string;
@@ -44,15 +45,7 @@ const CustomNav = ({
     '--badge-size': `${10 + (size / 50)}px`
   } as React.CSSProperties;
   const navigate = useNavigate()
-  const scrollToElement = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-      });
-    }
-  };
+  
   return (
     <nav
       className={`${styles.nav} ${styles[orientation]}`}
