@@ -1,0 +1,136 @@
+.codeContainer {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      overflow: hidden;
+      overflow-y: auto;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      max-height: 500px;
+    }
+    .codeHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 12px;
+      background-color: #252526;
+      border-bottom: 1px solid #3a3d41;
+    }
+    
+    .languageTag {
+      color: #9cdcfe;
+      font-size: 0.8rem;
+    }
+    
+    .copyButton {
+      background: none;
+      border: 1px solid #3a3d41;
+      color: #d4d4d4;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    
+    .codeWrapper {
+      display: flex;
+      overflow-x: auto;
+    }
+    
+    .lineNumbers {
+      padding: 12px 4px;
+      background-color: #252526;
+      color: #858585;
+      text-align: right;
+      user-select: none;
+      border-right: 1px solid #3a3d41;
+    }
+    
+    .lineNumber {
+      display: block;
+      line-height: 1.5;
+      padding: 0 8px;
+    }
+    
+    .codeBlock {
+      margin: 0;
+      padding: 12px 12px;
+      flex-grow: 1;
+      color: #d4d4d4;
+      line-height: 1.5;
+      white-space: pre;
+      tab-size: 2;
+      overflow-x: auto;
+    }
+    
+    .codeLine {
+      color: #d4d4d4;
+      display: block;
+      min-height: 1em;
+    }
+
+    .keyword {
+      color: #569cd6;
+      font-weight: bold;
+    }
+    
+    .constant {
+      color: #9cdcfe;
+    }
+    
+    .function {
+      color: #dcdcaa;
+    }
+    
+    .comment {
+      color: #6a9955;
+      font-style: italic;
+    }
+    
+    .string {
+      color: #ce9178;
+    }
+    
+    .number {
+      color: #b5cea8;
+    }
+    
+    .type {
+      color: #4ec9b0;
+    }
+    
+    .operator {
+      color: #d4d4d4;
+    }
+    
+    .brace {
+      color: #d4d4d4;
+    }
+
+    .bracket {
+      font-weight: bold;
+      color: rgba(214, 214, 0, 0.836);
+    }
+    
+    .bracket:after {
+      content: attr(data-char);
+    }
+    
+    .bracket[data-char="("],
+    .bracket[data-char=")"] {
+      color: #ffa500;
+    }
+    
+    .bracket[data-char="["],
+    .bracket[data-char="]"] {
+      color: #00bfff;
+    }
+    
+    .bracket[data-char="{"],
+    .bracket[data-char="}"] {
+      color: #7fff00;
+    }
+    
+    .bracket[data-char="<"],
+    .bracket[data-char=">"] {
+      color: #ff69b4;
+    }
+    

@@ -1,0 +1,130 @@
+.footer {
+      background: rgba(121, 121, 255, 0.1);
+      padding: 40px 0;
+      width: 100%;
+    }
+    
+    .contentWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      gap: 40px;
+    }
+    
+    .infoBlock {
+      flex: 0 1 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .textGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .description {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #555;
+    }
+    
+    .signature, .copyright {
+      font-size: 14px;
+      color: #777;
+    }
+    
+    .socialBlock {
+      flex: 0 1 25%;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    .socialLink {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .socialLink:hover {
+      color: #646cff;
+    }
+    
+    .socialIcon {
+      width: 20px;
+      height: 20px;
+    }
+    
+    /* Адаптивные стили */
+    @media (max-width: 1024px) {
+      .contentWrapper {
+        flex-wrap: wrap;
+        padding: 0 30px;
+        gap: 30px;
+      }
+    
+      .infoBlock {
+        flex: 0 1 100%;
+        order: 1;
+      }
+    
+      .navBlock {
+        flex: 0 1 50%;
+        order: 2;
+        justify-content: flex-start;
+      }
+    
+      .socialBlock {
+        flex: 0 1 50%;
+        order: 3;
+        justify-content: flex-end;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .contentWrapper {
+        padding: 0 20px;
+        gap: 25px;
+      }
+    
+      .navBlock {
+        flex: 0 1 100%;
+        order: 3;
+        justify-content: center;
+      }
+    
+      .socialBlock {
+        flex: 0 1 100%;
+        order: 2;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .footer {
+        padding: 30px 0;
+      }
+    
+      .contentWrapper {
+        padding: 0 15px;
+        gap: 20px;
+      }
+    
+      .description {
+        font-size: 15px;
+      }
+    
+      .socialLink {
+        font-size: 15px;
+      }
+    }

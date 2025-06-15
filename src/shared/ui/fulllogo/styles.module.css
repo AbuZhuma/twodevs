@@ -1,0 +1,33 @@
+.conatiner{
+      cursor: pointer;
+      display: flex;
+      height: 30px;
+      align-items: end;
+}
+.logo{
+      font-size: 30px;
+}
+
+.p{
+      font-weight: 500;
+}
+.p span{
+      font-size: 60px;
+      font-weight: 600;
+      color: #3a58d1;
+}
+@media (max-width: 600px){
+      .conatiner{
+            cursor: pointer;
+            display: flex;
+            height: 25px;
+            align-items: end;
+      }
+      .logo{
+            height: 100%;
+      }
+      
+      .p{
+            font-weight: 400;
+      }
+}

@@ -1,0 +1,207 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  font-family: 'SF Mono', 'Roboto Mono', monospace;
+  line-height: 1.7;
+  color: #1e293b;
+}
+
+.definition {
+  margin-bottom: 3rem;
+}
+
+.lead {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.highlight {
+  color: #2563eb;
+  font-weight: 600;
+  background: rgba(37, 99, 235, 0.1);
+  padding: 0.15rem 0.3rem;
+  border-radius: 4px;
+}
+
+.core, .useCase {
+  margin: 3rem 0;
+}
+
+.coreTitle, .useCaseTitle, .techTitle {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+  font-weight: 600;
+}
+
+.members {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.memberCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.memberHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.memberHeader h4 {
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.memberHeader h4 span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.memberIcon {
+  font-size: 1.8rem;
+  background: rgba(37, 99, 235, 0.1);
+  padding: 0.6rem;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memberSkills {
+  padding-left: 0;
+  margin: 0;
+}
+
+.memberSkills li {
+  list-style-type: none;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.memberSkills li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.techGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-top: 1.25rem;
+}
+
+.techCategory {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.techCategory h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #2563eb;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.techCategory ul {
+  padding: 0;
+  margin: 0;
+}
+
+.techItem {
+  display: block;
+  padding: 0.5rem 0;
+  color: #1e293b;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.techItem::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: #64748b;
+}
+
+.cases {
+  padding-left: 0;
+}
+
+.cases li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.8;
+}
+
+.cases li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .lead {
+    font-size: 1.5rem;
+  }
+  
+  .coreTitle, .useCaseTitle, .techTitle {
+    font-size: 1.3rem;
+  }
+  
+  .memberSkills li, .cases li, .techItem {
+    font-size: 1rem;
+    padding-left: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lead {
+    font-size: 1.3rem;
+  }
+  
+  .members {
+    grid-template-columns: 1fr;
+  }
+  
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+}

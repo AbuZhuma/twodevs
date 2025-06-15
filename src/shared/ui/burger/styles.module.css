@@ -1,0 +1,67 @@
+/* Контейнер */
+.burgerMenu {
+      position: relative;
+      z-index: 1000;
+    }
+    
+    /* Кнопка бургера */
+    .burgerBtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 24px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 10;
+    }
+    
+    .burgerBtn span {
+      width: 100%;
+      height: 2px;
+      background: #333;
+      transition: all 0.3s ease;
+    }
+    
+    /* Анимация в крестик */
+    .burgerBtn.open span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .burgerBtn.open span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .burgerBtn.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    /* Контент меню */
+    .menuContent {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      background: rgb(255, 255, 255);
+      border: 1px solid rgba(0, 0, 0, 0.247);
+      backdrop-filter: blur(5px);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      overflow-y: auto;
+      z-index: 5;
+    }
+    
+    .menuContent.open {
+      transform: translateX(0);
+    }
+    
+    .menuInner {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      color: white;
+    }

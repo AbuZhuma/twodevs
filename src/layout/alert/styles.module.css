@@ -1,0 +1,86 @@
+.alert {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      max-width: 350px;
+      width: 90%;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transform: translateY(100px) scale(0.95);
+      opacity: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    .content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      flex-grow: 1;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    
+    .closeButton {
+      background: transparent;
+      border: none;
+      padding: 0 16px;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+    }
+    
+    .closeButton:hover {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.05);
+    }
+    
+    .show {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .hide {
+      transform: translateY(100px) scale(0.95);
+      opacity: 0;
+    }
+    
+    /* Типы уведомлений */
+    .error {
+      background: #FFEBEE;
+      color: #C62828;
+      border-left: 4px solid #F44336;
+    }
+    
+    .warning {
+      background: #FFF8E1;
+      color: #F57F17;
+      border-left: 4px solid #FFC107;
+    }
+    
+    .info {
+      background: #E3F2FD;
+      color: #1565C0;
+      border-left: 4px solid #2196F3;
+    }
+    
+    .success {
+      background: #E8F5E9;
+      color: #2E7D32;
+      border-left: 4px solid #4CAF50;
+    }

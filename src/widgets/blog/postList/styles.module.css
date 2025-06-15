@@ -1,0 +1,21 @@
+.wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+}
+.list{
+      display: flex;
+      padding: 20px 0px;
+      overflow-y: auto;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      height: 100%;
+      padding-bottom: 50px;
+}
+@media (max-width: 900px){
+      .list{
+            width: 95%;
+      }
+}

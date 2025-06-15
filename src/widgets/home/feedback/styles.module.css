@@ -1,0 +1,77 @@
+.feedback{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 550px;
+      margin-bottom: 100px;
+}
+.inner{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+}
+.form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      height: 100%;
+      width: 50%;
+}
+
+.nets{
+      width: 40%;
+      height: 100%;
+}
+
+@media (max-width: 900px){
+      .nets{
+            display: none;
+      }
+      .form{
+            width: 100%;
+      }
+}
+
+.successMessage {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      gap: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .successMessage h3 {
+      color: #2E7D32;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    
+    .successMessage p {
+      color: #555;
+      margin: 0.5rem 0 1.5rem;
+    }
+    
+    .backButton {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    
+    .backButton:hover {
+      background: #3E8E41;
+    }

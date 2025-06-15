@@ -1,0 +1,17 @@
+.docs{
+      padding: 10px 0px 20px 0px;
+      display: flex;
+      width: 100% ;
+      min-height: 100vh;
+}
+
+.burger{
+      margin-left: 10px;
+      margin-bottom: 10px;
+}
+@media (max-width: 750px){
+      .docs{
+            display: flex;
+            flex-direction: column;
+      }
+}

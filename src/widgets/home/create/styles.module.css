@@ -1,0 +1,15 @@
+.container{
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      width: 100%;
+}
+.title{
+      font-size: 20px;
+      margin-bottom: 15px;
+}
+.btns{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+}

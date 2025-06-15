@@ -1,0 +1,93 @@
+/* Базовые стили с CSS-переменными */
+.nav {
+      font-family: "Roboto", sans-serif;
+      color: var(--main-color);
+      --nav-width: 100%;
+      --font-size: 14px;
+      --padding: 10px;
+      --item-gap: 4px;
+      --title-margin: 16px;
+      --border-radius: 4px;
+      --badge-size: 12px;
+      height: auto;
+    }
+    
+    /* Вертикальная навигация */
+    .nav.vertical {
+      width: var(--nav-width);
+      max-width: 300px;
+    }
+    
+    .nav.vertical .navList {
+      display: flex;
+      flex-direction: column;
+      gap: var(--item-gap);
+      padding: calc(var(--padding) / 2) 0;
+    }
+    
+    /* Горизонтальная навигация */
+    .nav.horizontal {
+      width: var(--nav-width);
+    }
+    
+    .nav.horizontal .navList {
+      display: flex;
+      gap: calc(var(--item-gap) * 2);
+      padding: 0 var(--padding);
+    }
+    
+    /* Общие стили элементов */
+    .navList {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navItem {
+      padding: var(--padding) calc(var(--padding) * 1.5);
+      cursor: pointer;
+      border-radius: var(--border-radius);
+      font-size: var(--font-size);
+      display: flex;
+      align-items: center;
+      gap: calc(var(--item-gap) * 2);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    
+    .navItem:hover:not(.title) {
+      background-color: rgba(121, 121, 255, 0.1);
+      color: var(--blue-color);
+    }
+    
+    .navItem.active:not(.title) {
+      background-color: rgba(121, 121, 255, 0.2);
+      color: var(--blue-color);
+      font-weight: 500;
+    }
+    
+    .title {
+      color: var(--main-color);
+      font-weight: 600;
+      font-size: calc(var(--font-size) - 2px);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: var(--title-margin);
+      padding: calc(var(--padding) / 2) calc(var(--padding) * 1.5);
+      cursor: default;
+      opacity: 0.7;
+    }
+    
+    .horizontal .title {
+      display: none;
+    }
+    
+    .newBadge {
+      font-size: var(--badge-size);
+      background-color: var(--blue-color);
+      color: white;
+      padding: 2px 4px;
+      border-radius: calc(var(--border-radius) * 0.75);
+      margin-left: auto;
+      line-height: 1;
+    }

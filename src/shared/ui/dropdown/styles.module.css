@@ -1,0 +1,78 @@
+.dropdownContainer {
+      position: relative;
+      width: 100%;
+      font-family: "Roboto", sans-serif;
+    }
+    
+    .dropdownHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background-color: white;
+      border: 1px solid var(--inputs-border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .dropdownHeader:hover {
+      border-color: var(--blue-color);
+    }
+    
+    .dropdownHeader.open {
+      border-color: var(--focus-inputs-border);
+      box-shadow: 0 0 0 2px rgba(121, 121, 255, 0.2);
+    }
+    
+    .selectedValue {
+      color: var(--main-color);
+      font-size: 14px;
+      font-weight: 400;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .arrow {
+      transition: transform 0.2s ease;
+      margin-left: 10px;
+    }
+    
+    .arrow.rotated {
+      transform: rotate(180deg);
+    }
+    
+    .dropdownList {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin-top: 4px;
+      background-color: white;
+      border: 1px solid var(--inputs-border);
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    
+    .dropdownItem {
+      padding: 10px 16px;
+      color: var(--main-color);
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .dropdownItem:hover {
+      background-color: rgba(121, 121, 255, 0.1);
+      color: var(--blue-color);
+    }
+    
+    .dropdownItem.selected {
+      background-color: rgba(121, 121, 255, 0.2);
+      color: var(--blue-color);
+      font-weight: 500;
+    }
