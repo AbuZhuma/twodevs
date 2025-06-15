@@ -29,7 +29,7 @@ const Feadback = () => {
     }
   }
   return (
-    <OneSecton className={styles.feedback}>
+    <OneSecton title="Place an order" className={styles.feedback}>
       {load === "def" ?
         <div className={styles.inner} id="fb">
           <form className={styles.form} onSubmit={(e) => postFb(e)}>
