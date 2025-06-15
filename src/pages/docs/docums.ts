@@ -1,11 +1,10 @@
-import { url } from "../../shared/api"
 
 const docums: { [key: string]: { tag: string, text: string, lang?: string }[] } = {
   "siroca-crm": [
     { tag: "h1", text: "Siroca CRM System" },
     { tag: "h3", text: "Project Overview" },
     { tag: "text", text: "Developed a comprehensive CRM system for client request management with role-based access control. Implemented by a two-person team with frontend (Vite/React/TypeScript) and backend (Node.js/Express) components using Feature-Sliced Design architecture." },
-    { tag: "img", text: `${url}siroca1.jpeg` },
+    { tag: "img", text: `/images/siroca1.jpeg` },
 
     { tag: "h3", text: "Key Features" },
     { tag: "text", text: "- Role-based access control (Admin/Manager/Client)\n- Request tracking with status updates\n- Customizable notification system\n- Dynamic checklist management\n- Comprehensive reporting tools" },
@@ -34,11 +33,11 @@ const docums: { [key: string]: { tag: string, text: string, lang?: string }[] } 
     { tag: "text", text: "- 40% reduction in request processing time\n- 50+ concurrent users supported\n- Improved workflow efficiency through role specialization\n- 100+ automated test cases ensuring system reliability" },
 
     { tag: "h2", text: "System Screenshots" },
-    { tag: "img", text: `${url}siroca2.jpeg` },
-    { tag: "img", text: `${url}siroca3.jpeg` },
-    { tag: "img", text: `${url}siroca4.jpeg` },
-    { tag: "img", text: `${url}siroca5.jpeg` },
-    { tag: "img", text: `${url}siroca6.jpeg` },
+    { tag: "img", text: `/images/siroca2.jpeg` },
+    { tag: "img", text: `/images/siroca3.jpeg` },
+    { tag: "img", text: `/images/siroca4.jpeg` },
+    { tag: "img", text: `/images/siroca5.jpeg` },
+    { tag: "img", text: `/images/siroca6.jpeg` },
   ]
 }
 
