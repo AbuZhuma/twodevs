@@ -28,7 +28,6 @@ const CustomNav = ({
   isOrd
 }: CustomNavProps) => {
   const [activeItem, setActiveItem] = useState(activeId);
-
   const handleItemClick = (id: string, isTitle?: boolean) => {
     if (isTitle) return;
     setActiveItem(id);
@@ -71,7 +70,7 @@ const CustomNav = ({
             {item.isNew && <span className={styles.newBadge}>🆕</span>}
           </li>
         ))}
-        {isOrd && <CustomButton text="Order" size={60} onClick={async() => {
+        {isOrd && <CustomButton text="Order" size={60} onClick={async () => {
           navigate("/")
           setTimeout(() => {
             scrollToElement("fb")

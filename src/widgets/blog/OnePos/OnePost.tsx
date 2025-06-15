@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import styles from "./styles.module.css";
+import axios from "axios";
+import { api } from "../../../shared/api";
 
 const OnePost = ({
   title,
@@ -18,6 +20,7 @@ const OnePost = ({
   const [isHelpful, setIsHelpful] = useState<boolean | null>(null);
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const [feedbackText, setFeedbackText] = useState("");
+  const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showCopyNotification, setShowCopyNotification] = useState(false);
 
@@ -27,14 +30,32 @@ const OnePost = ({
     setShowCopyNotification(true);
     setTimeout(() => setShowCopyNotification(false), 2000);
   };
+  const postFb = async (e: FormEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    try {
+      const res = await axios.post(`${api}/feabdacks`, { text: `
+  Was helpful: ${isHelpful ? "yes" : "no"}
+  Reaction: ${reaction}
+  Message: ${feedbackText}
+        `, email: email, title: `Feadback for "${title}" post!`}, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-  const handleSubmitFeedback = () => {
+  const handleSubmitFeedback = (e: FormEvent<HTMLButtonElement>) => {
     console.log({
       reaction,
       isHelpful,
       feedbackText
     });
     setIsSubmitted(true);
+    postFb(e)
     setTimeout(() => {
       setIsFeedbackOpen(false);
       setIsSubmitted(false);
@@ -59,7 +80,7 @@ const OnePost = ({
       <div className={styles.changelog}>
         <div className={styles.changelogHeader}>
           <h3>Changelog:</h3>
-          <button 
+          <button
             onClick={handleCopyChangelog}
             className={styles.copyButton}
             title="Copy changelog"
@@ -76,7 +97,7 @@ const OnePost = ({
           <div className={styles.copyNotification}>Copied to clipboard!</div>
         )}
       </div>
-      
+
       <div className={styles.reactions}>
         <h4>How do you feel about this update?</h4>
         <div className={styles.reactionButtons}>
@@ -93,19 +114,19 @@ const OnePost = ({
       </div>
 
       <div className={styles.feedbackContainer}>
-        <button 
+        <button
           className={styles.feedbackToggle}
           onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
         >
           {isFeedbackOpen ? "▲ Hide feedback form" : "▼ Leave detailed feedback"}
         </button>
-        
+
         {isFeedbackOpen && (
           <div className={styles.feedbackForm}>
             {!isSubmitted ? (
               <>
                 <div className={styles.feedbackQuestion}>
-                  <p>Was this update helpful?</p>
+                  <p>Was this post helpful?</p>
                   <div className={styles.feedbackButtons}>
                     <button
                       onClick={() => setIsHelpful(true)}
@@ -123,6 +144,7 @@ const OnePost = ({
                 </div>
 
                 <div className={styles.feedbackTextarea}>
+                  <input type="text" name="" id="" onChange={(e) => setEmail(e.target.value)}/>
                   <textarea
                     placeholder="Your detailed feedback (optional)..."
                     value={feedbackText}
@@ -131,7 +153,7 @@ const OnePost = ({
                 </div>
 
                 <button
-                  onClick={handleSubmitFeedback}
+                  onClick={(e) => handleSubmitFeedback(e)}
                   className={styles.submitButton}
                   disabled={isHelpful === null}
                 >

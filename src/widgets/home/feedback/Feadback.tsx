@@ -17,7 +17,7 @@ const Feadback = () => {
     e.preventDefault()
     try {
       setLoad("load")
-      const res = await axios.post(`${api}/feabdacks`, { text: message, email: email }, {
+      const res = await axios.post(`${api}/feabdacks`, { text: message, email: email, title:"New Order Received!" }, {
         headers: {
           "Content-Type": "application/json"
         }

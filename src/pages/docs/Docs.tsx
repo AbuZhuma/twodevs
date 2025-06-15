@@ -5,13 +5,17 @@ import CustomNav from "../../shared/ui/nav/CustomNav"
 import styles from "./styles.module.css"
 import docums from "./docums";
 import BurgerMenu from "../../shared/ui/burger/CustomBurger";
-import { useDocsStore } from "./api";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Docs = () => {
-      const {selected, select} = useDocsStore()
-      const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+      const params = useParams()
+      const navigate = useNavigate()
+      const [windowWidth, setWindowWidth] = useState(window.innerWidth)
       useEffect(() => {
+            if (!params.sel) {
+                  navigate("/portfolio/" + "siroca-crm")
+                  return
+            }
             const handleResize = () => {
                   setWindowWidth(window.innerWidth);
             };
@@ -20,13 +24,15 @@ const Docs = () => {
                   window.removeEventListener('resize', handleResize);
             };
       }, []);
+      
       const navItems = [
             { id: 'getting-started', label: 'Our projects', isTitle: true },
-            { id: 'siroca-crm', label: 'Siroca Crm'},
-            { id: '', label: ''}
+            { id: 'siroca-crm', label: 'Siroca Crm' },
+            { id: 'nft-marketplace', label: 'Nft marketplace' },
+            { id: 'harmony-smile', label: 'Website for Dentistry' },
       ];
       const onClick = (id: string) => {
-            docums[id] ? select(id) : null
+            navigate("/portfolio/" + id)
       }
       return (
             <AnimWrapper>
@@ -35,7 +41,7 @@ const Docs = () => {
                               <CustomNav
                                     items={navItems}
                                     orientation={"vertical"}
-                                    activeId="introduction"
+                                    activeId={params.sel}
                                     onItemClick={onClick}
                                     size={100}
                               /> :
@@ -43,10 +49,10 @@ const Docs = () => {
                                     <BurgerMenu><CustomNav size={100} orientation="vertical" items={navItems} onItemClick={onClick} /></BurgerMenu>
                               </div>}
 
-                        {docums[selected] ?
+                        {params.sel && docums[params.sel] ?
                               <CustomDoc
                                     size={800}
-                                    content={docums[selected]}
+                                    content={docums[params.sel]}
                               />
                               : null}
                   </div>
