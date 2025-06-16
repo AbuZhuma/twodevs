@@ -16,6 +16,7 @@ const createLazyRoute = (Component: LazyComponent) => (
 const Home = lazy(() => import("./pages/home/HomePage"));
 const Docs = lazy(() => import("./pages/docs/Docs"))
 const Blog = lazy(() => import("./pages/blog/BlogPage"))
+const Admin = lazy(() => import("./pages/admin/Admin"))
 
 const App: FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: FC = () => {
           <Route path="/portfolio" index element={createLazyRoute(Docs)} />
           <Route path="/portfolio/:sel" index element={createLazyRoute(Docs)} />
           <Route path="/blog" index element={createLazyRoute(Blog)} />
+          <Route path="/admin" index element={createLazyRoute(Admin)} />
           <Route path="*" element={createLazyRoute(Home)} />
         </Route>
       </Routes>
