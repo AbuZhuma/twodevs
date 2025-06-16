@@ -74,7 +74,7 @@ const docums: { [key: string]: { tag: string, text: string, lang?: string }[] } 
     { tag: "h1", text: "Harmony Smile Dentistry" },
     { tag: "h3", text: "Project Overview" },
     { tag: "text", text: "Developed a modern WordPress website for dental clinic featuring online booking, treatment gallery and service information. Fully mobile-optimized with SEO best practices." },
-    { tag: "img", text: `/images/harmony1.webp` },
+    { tag: "img", text: `/images/harmony1.jpeg` },
 
     { tag: "h3", text: "Main Sections" },
     { tag: "text", text: "- Services catalog with pricing\n- Before/after treatment gallery\n- Dentists profiles\n- Online appointment form\n- Dental care blog" },
