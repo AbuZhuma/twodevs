@@ -26,6 +26,7 @@ const App: FC = () => {
           <Route path="/portfolio" index element={createLazyRoute(Docs)} />
           <Route path="/portfolio/:sel" index element={createLazyRoute(Docs)} />
           <Route path="/blog" index element={createLazyRoute(Blog)} />
+          <Route path="*" element={createLazyRoute(Home)} />
         </Route>
       </Routes>
     </Router>
