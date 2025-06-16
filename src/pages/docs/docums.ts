@@ -11,7 +11,6 @@ const docums: { [key: string]: { tag: string, text: string, lang?: string }[] } 
 
     { tag: "h3", text: "Technical Stack" },
     { tag: "text", text: "Frontend:\n- Vite + React + TypeScript\n- Zustand state management\n- Feature-Sliced Design\n\nBackend:\n- Node.js + Express\n- RESTful API + WebSockets\n- RBAC middleware" },
-    { tag: "img", text: "ARCHITECTURE_DIAGRAM_URL" },
 
     { tag: "h3", text: "Key Challenges & Solutions" },
     { tag: "h4", text: "1. Role-Based Download Permissions" },
@@ -41,7 +40,7 @@ const docums: { [key: string]: { tag: string, text: string, lang?: string }[] } 
   ],
   "nft-marketplace": [
     { tag: "h1", text: "NFT Marketplace Platform" },
-    { tag: "img", text: `/images/nft_market1.png` },
+    { tag: "img", text: `/images/nft_market1.webp` },
     { tag: "h3", text: "Project Overview" },
     { tag: "text", text: "Developed a full-stack NFT marketplace with minting, trading, and auction capabilities. The platform supports digital art and collectibles with secure blockchain-like transactions using cryptographic verification." },
     { tag: "img", text: `/images/nft-market-main.jpeg` },
@@ -75,14 +74,13 @@ const docums: { [key: string]: { tag: string, text: string, lang?: string }[] } 
     { tag: "h1", text: "Harmony Smile Dentistry" },
     { tag: "h3", text: "Project Overview" },
     { tag: "text", text: "Developed a modern WordPress website for dental clinic featuring online booking, treatment gallery and service information. Fully mobile-optimized with SEO best practices." },
-    { tag: "img", text: `/images/harmony1.png` },
+    { tag: "img", text: `/images/harmony1.webp` },
 
     { tag: "h3", text: "Main Sections" },
     { tag: "text", text: "- Services catalog with pricing\n- Before/after treatment gallery\n- Dentists profiles\n- Online appointment form\n- Dental care blog" },
 
     { tag: "h3", text: "Technology Stack" },
     { tag: "text", text: "CMS:\n- WordPress 6.0+\n\nPlugins:\n- Elementor Pro (page builder)\n- WPForms (contact forms)\n- Yoast SEO\n- Real Media Library (gallery)\n\nIntegrations:\n- Google Calendar\n- Yandex.Metrika\n- SendPulse (email marketing)" },
-    { tag: "img", text: `/images/harmony2.png` },
 
     { tag: "h3", text: "Key Features" },
     { tag: "h4", text: "1. Online Booking" },
@@ -101,8 +99,8 @@ const docums: { [key: string]: { tag: string, text: string, lang?: string }[] } 
     { tag: "text", text: "- 35% increase in booking conversions\n- 90+ PageSpeed score\n- Top 3 in Yandex for key queries\n- Easy content management for clinic" },
 
     { tag: "h2", text: "Website Screenshots" },
-    { tag: "img", text: `/images/harmony3.png` },
-    { tag: "img", text: `/images/harmony4.png` }
+    { tag: "img", text: `/images/harmony3.webp` },
+    { tag: "img", text: `/images/harmony4.webp` }
   ]
 }
 
