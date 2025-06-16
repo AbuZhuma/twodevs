@@ -21,7 +21,7 @@ const ProjectsShowcase = () => {
                   stack: ["React 19", "Express", "Node.js", "TypeScript", "AWS", "MongoDB", "Redux"],
                   year: "2024",
                   url: "nft-marketplace",
-                  image: `/images/nft_market1.png`
+                  image: `/images/nft_market1.webp`
             },
             {
                   id: 3,
@@ -30,7 +30,7 @@ const ProjectsShowcase = () => {
                   stack: ["WordPress", "Elementor Pro", "MySQL", "Yoast SEO", "Node.js", "Express"],
                   year: "2023",
                   url: "harmony-smile",
-                  image: `/images/harmony1.png`
+                  image: `/images/harmony1.jpeg`
             }
       ];
 
